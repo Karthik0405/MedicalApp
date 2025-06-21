@@ -1,0 +1,36 @@
+POST http://localhost:3000/register/
+Content-Type:application/json
+
+{
+    "name":"Adam Richard",
+    "email":"adam@gmail.com",
+    "password":"rich1234",
+    "role": "patient"
+}
+###
+POST http://localhost:3000/login/
+Content-Type:application/json
+
+{
+    "username":"Adam Richard",
+    "password":"rich1234"
+}
+
+### Get Medication History
+GET http://localhost:3000/medication-history/Adam Richard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkYW0gUmljaGFyZCIsImlhdCI6MTc1MDQwNzU3OH0.lyHJkSi8X2iQ3pGz26scqlRyoQDZ8RfFaaSp3zKxdE8
+###
+
+POST  http://localhost:3000/medication-history/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkYW0gUmljaGFyZCIsImlhdCI6MTc1MDQwNzU3OH0.lyHJkSi8X2iQ3pGz26scqlRyoQDZ8RfFaaSp3zKxdE8
+Content-Type:application/json
+
+{
+    "username":"Adam Richard",
+    "date": "2025-06-11",
+    "imageUrl": "http://example.com/image.jpg"
+}
+
+###
+GET http://localhost:3000/user-email/Adam Richard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkYW0gUmljaGFyZCIsImlhdCI6MTc1MDQwNzU3OH0.lyHJkSi8X2iQ3pGz26scqlRyoQDZ8RfFaaSp3zKxdE8
